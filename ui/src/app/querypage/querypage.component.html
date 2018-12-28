@@ -1,0 +1,31 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">SQL Query Interface</h1>
+        <p class="lead">
+            Enter any query to select or modify the database. 
+        </p>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Query</span>
+            </div>
+            <input type="text" name="query" [(ngModel)]="query" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default">
+            <button class="btn btn-outline-success my-2 my-sm-0" (click)="execute()" type="submit">Excecute</button>
+        </div>
+        <p class="lead">
+            {{ message }}
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th *ngFor="let key of keys">{{ key }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let val of vals">
+                    <th *ngFor="let field of val">{{ field }}</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

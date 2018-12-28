@@ -1,0 +1,38 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+      <h1 class="display-4">Search drinkers</h1>
+      <p class="lead">
+            Enter drinker names to search, click on results to view details. 
+      </p>
+      <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" name="drinker_name" [(ngModel)]="drinker_name" placeholder="Search"
+              aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" (click)="findDrinkers()" type="submit">Search</button>
+      </form>
+      <br>
+      <p-table [value]="drinkers">
+          <ng-template pTemplate="header">
+              <tr>
+                  <th>Name</th>
+                  <th>Phone</th>
+                  <th>Address</th>
+                  <th>State</th>
+              </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-drinker>
+              <tr>
+                  <td>
+                      <a routerLink="/drinkers/{{ drinker.name }}">
+                          {{ drinker.name }}
+                      </a>
+                  </td>
+                  <th>{{ drinker.phone }}</th>
+                  <th>{{ drinker.address }}</th>
+                  <th>{{ drinker.state }}</th>
+
+              </tr>
+          </ng-template>
+      </p-table>
+      
+  </div>
+</div>

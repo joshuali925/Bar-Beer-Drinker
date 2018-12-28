@@ -1,0 +1,34 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">{{ barName }}</h1>
+        <p class="bar-details" *ngIf="barDetails">
+            {{ barDetails?.address + ", " + barDetails?.state }}
+            <br>
+            {{ barDetails?.phone }}
+        </p>
+    </div>
+    <br>
+    <div class="container">
+        <div id="squandergraph"></div>
+    </div>
+    <br>
+    <div class="container">
+        <div id="beergraph"></div>
+    </div>
+    <br>
+    <div class="container">
+        <div id="manfgraph"></div>
+    </div>
+    <br>
+    <div class="container">
+        <div id="salesvshourgraph"></div>
+    </div>
+    <br>
+    <div class="container">
+        <div id="salesvsdayofweekgraph"></div>
+    </div>
+    <br>
+    <div class="container">
+        <div id="salesvsmonthgraph"></div>
+    </div>
+</div>

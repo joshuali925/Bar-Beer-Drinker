@@ -1,0 +1,47 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">{{ drinkerName }}</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Transaction ID</th>
+                    <th>Bar</th>
+                    <th>Time</th>
+                    <th>Total</th>
+                    <th>Tip</th>
+                    <th>Tax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let bill of bills">
+                    <th>{{ bill.transaction_id }}</th>
+                    <th>{{ bill.bar_name }}</th>
+                    <th>{{ bill.time }}</th>
+                    <th>{{ bill.total }}</th>
+                    <th>{{ bill.tip }}</th>
+                    <th>{{ bill.tax }}</th>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <div class="container">
+            <div id="ordergraph"></div>
+        </div>
+        <br>
+        <div class="container">
+            <div id="spendinginbarsgraph"></div>
+        </div>
+        <br>
+        <div class="container">
+            <div id="spendingvshourgraph"></div>
+        </div>
+        <br>
+        <div class="container">
+            <div id="spendingvsdayofweek"></div>
+        </div>
+        <br>
+        <div class="container">
+            <div id="spendingvsmonthgraph"></div>
+        </div>
+    </div>
+</div>
